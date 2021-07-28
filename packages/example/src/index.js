@@ -11,8 +11,12 @@ function App() {
       <div>
         <tracer.div
           className="box"
-          initial={{ x: 0, rotate: 0 }}
-          animate={{ x: 400, rotate: 180 }}
+          variants={{
+            from: { x: 0, rotate: 0 },
+            to: { x: 400, rotate: 180 },
+          }}
+          initial="from"
+          animate="to"
           transition={{ type: 'spring', stiffness: 50 }}
         />
       </div>

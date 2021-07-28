@@ -47,10 +47,6 @@ function App() {
 
 &nbsp;
 
-Note: This does not support `variants` yet.
-
-&nbsp;
-
 #### like it?
 
 :star: this repo

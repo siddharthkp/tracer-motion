@@ -1053,7 +1053,7 @@ var useMotionValues = function useMotionValues(initial) {
   return motionValues;
 };
 
-var _excluded = ["initial", "style", "onAnimationComplete", "onAnimationStart"];
+var _excluded = ["initial", "variants", "style", "onAnimationComplete", "onAnimationStart"];
 var target = {};
 var handler = {
   get: function get(target, prop) {
@@ -1074,13 +1074,17 @@ var Wrapper = function Wrapper(_ref) {
 
   var _props$initial = props.initial,
       initial = _props$initial === void 0 ? {} : _props$initial,
+      variants = props.variants,
       _props$style = props.style,
       style = _props$style === void 0 ? {} : _props$style,
       onAnimationComplete = props.onAnimationComplete,
       onAnimationStart = props.onAnimationStart,
       rest = _objectWithoutProperties(props, _excluded);
 
-  var _useTracer = useTracer(initial),
+  var initialValues = null;
+  if (variants && variants[initial]) initialValues = variants[initial];else initialValues = initial;
+
+  var _useTracer = useTracer(initialValues),
       _useTracer2 = _slicedToArray(_useTracer, 3),
       animatedStyles = _useTracer2[0],
       Frames = _useTracer2[1],
@@ -1115,6 +1119,7 @@ var Wrapper = function Wrapper(_ref) {
   return /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/React__default['default'].createElement(MotionComponent, _extends({
     ref: ref,
     initial: initial,
+    variants: variants,
     style: _objectSpread2(_objectSpread2({}, style), animatedStyles),
     onAnimationStart: combinedOnAnimationStart,
     onAnimationComplete: combinedOnAnimationComplete

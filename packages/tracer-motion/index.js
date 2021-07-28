@@ -17,12 +17,19 @@ const Wrapper = ({ type, props }) => {
 
   const {
     initial = {},
+    variants,
     style = {},
     onAnimationComplete,
     onAnimationStart,
     ...rest
   } = props;
-  const [animatedStyles, Frames, ref] = useTracer(initial);
+
+  let initialValues = null;
+
+  if (variants && variants[initial]) initialValues = variants[initial];
+  else initialValues = initial;
+
+  const [animatedStyles, Frames, ref] = useTracer(initialValues);
 
   const [startPosition, setStartPosition] = React.useState({
     top: null,
@@ -49,6 +56,7 @@ const Wrapper = ({ type, props }) => {
       <MotionComponent
         ref={ref}
         initial={initial}
+        variants={variants}
         style={{ ...style, ...animatedStyles }}
         onAnimationStart={combinedOnAnimationStart}
         onAnimationComplete={combinedOnAnimationComplete}
