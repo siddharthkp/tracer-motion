@@ -13,7 +13,7 @@ function App() {
           className="box"
           initial={{ x: 0, rotate: 0 }}
           animate={{ x: 400, rotate: 180 }}
-          transition={{ type: 'spring', stiffness: 50, delay: 2 }}
+          transition={{ type: 'spring', stiffness: 50 }}
         />
       </div>
     </>
