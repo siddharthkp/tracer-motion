@@ -1,0 +1,34 @@
+{
+  "name": "tracer-motion",
+  "version": "0.0.1",
+  "description": "visual debugger for framer-motion",
+  "source": "index.js",
+  "main": "dist.js",
+  "files": [
+    "dist.js"
+  ],
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "leva": "^0.9.13"
+  },
+  "devDependencies": {
+    "rollup": "^2.55.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0"
+  },
+  "peerDependencies": {
+    "framer-motion": ">4.0.0",
+    "react": ">16.8.0",
+    "react-dom": ">16.8.0"
+  },
+  "author": "siddharthkp",
+  "license": "MIT",
+  "keywords": [
+    "debugger",
+    "frames",
+    "framer-motion"
+  ]
+}
