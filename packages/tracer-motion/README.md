@@ -47,7 +47,7 @@ function App() {
 
 &nbsp;
 
-Note: This does not support the entire API surface area of `motion`
+Note: This does not support `variants` yet.
 
 &nbsp;
 

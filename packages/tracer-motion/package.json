@@ -1,6 +1,6 @@
 {
   "name": "tracer-motion",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "visual debugger for framer-motion",
   "source": "index.js",
   "main": "dist.js",
