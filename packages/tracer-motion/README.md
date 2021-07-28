@@ -3,7 +3,7 @@
   <br><br>
   <b>Visual debugger for framer-motion</b>
   <br><br>
-  <img src="https://img.shields.io/badge/status-experimental-de9214?style=flat-square"/>
+  <img src="https://img.shields.io/badge/status-experimental-de9214?style=flat"/>
   <br><br>
   <a href="https://codesandbox.io/s/tracer-motion-x4570">Demo</a> 
 </p>
