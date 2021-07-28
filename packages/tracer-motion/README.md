@@ -3,13 +3,10 @@
   <br><br>
   <b>Visual debugger for framer-motion</b>
   <br><br>
-  <a href="https://codesandbox.io/s/tracer-motion-x4570">Demo</a>
- 
+  <img src="https://img.shields.io/badge/status-experimental-de9214?style=flat-square"/>
+  <br><br>
+  <a href="https://codesandbox.io/s/tracer-motion-x4570">Demo</a> 
 </p>
-
-&nbsp;
-
-[Demo on CodeSandbox](https://codesandbox.io/s/tracer-motion-x4570)
 
 &nbsp;
 
@@ -47,6 +44,10 @@ function App() {
   );
 }
 ```
+
+&nbsp;
+
+Note: This does not support the entire API surface area of `motion`
 
 &nbsp;
 
